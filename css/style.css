@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(233, 152, 252);
+}
+
+#catFactsApp {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+padding: 40px;
+}
+
+img {
+    max-width: 100%;
+}
