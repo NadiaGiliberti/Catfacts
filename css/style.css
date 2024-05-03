@@ -1,20 +1,87 @@
+/* Browserstile zurücksetzen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(233, 152, 252);
+/* Schriftart Einfügen */
+
+@font-face {
+    font-family: 'tell_me_a_joke';
+    src: url('../schriften/tell_me_a_joke.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Style für Startseite */
+
+body {
+    font-family: tell_me_a_joke;
+    background-color: #F6F5F1;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 6vw;
+    
+}
+
+p {
+    font-size: 3vw;
+}
+
+/* Inhalte von API */
+
 #catFactsApp {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 15px;
-padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 40px;
 }
 
 img {
     max-width: 100%;
+}
+
+/* Popupfenster wenn die Seite geladen wird: */
+
+    /* Popup Fenster */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f5f1c4; /* Hintergrundfarbe mit Transparenz für Overlay */
+   color:#F6F5F1;
+    z-index: 999; /* Z-Index, um das Popup über anderen Inhalten zu platzieren */
+}
+
+/* Popup Inhalt */
+.popup-content {
+    background-color: #AC99BA;
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+    /* Button beim Popup */
+#go_for_it {
+    font-family: tell_me_a_joke;
+    background-color: #000000;
+    color: #F6F5F1;
+    font-size: 3vw;
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 10px;
+    border: none;
 }
