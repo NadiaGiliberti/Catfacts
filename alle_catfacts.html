@@ -9,20 +9,9 @@
 </head>
 
 <body>
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h1>SO GEHTS:</h1>
-            <p>Die Katze will spielen. Fahre mit dem Cursor über den Bildschirm und versuche die Maus zu fangen! Bei
-                jedem erfolgreichen Fang schaltest du einen Catfact frei</p>
-            <button id="go_for_it" onclick="closePopup()">GO FUR IT</button>
-        </div>
-    </div>
-
-
     <header class="header">
         <nav class="navigation">
-            <h1 class="score">0x Gefangen</h1>
+            <h1>Katzen sind super, hier sind ganz viele Fakten:</h1>
             <div class="burger">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -44,20 +33,20 @@
 
     </header>
 
-
-    <main class="main">
+    <main>
+        <input type="text" id="searchBox" placeholder="Suche...">
         <div class=container id="catFactsApp">
-            <img src="images/cat.png" alt="Bild Katze" id="cat">
-            <a href="catfact.html"><img src="images/mouse.png" alt="Bild Maus" id="mouse"></a>
+
+
         </div>
     </main>
 
-
-    <footer class="footer">
+    <footer>
 
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/alle_catfacts.js"></script>
 </body>
 
 </html>
