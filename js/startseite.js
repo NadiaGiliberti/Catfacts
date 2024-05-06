@@ -12,6 +12,9 @@ function closePopup() {
     popup.style.display = "none";
 }
 
+// Fenstergröße erheben
+let mouseXprevious = [0];
+let mouseYprevious = [0];
 
 // Katze an Cursor
 let cat = document.querySelector('#cat');
@@ -19,14 +22,12 @@ document.addEventListener('mousemove', function(e) {
     let posX = e.clientX;
     let posY = e.clientY;
 
-    // Position des Mittelpunkts des Bildes
-    let catRect = cat.getBoundingClientRect();
-    let centerX = catRect.left + catRect.width / 2;
-    let centerY = catRect.top + catRect.height / 2;
+    let lastMouseX = mouseXprevious[mouseXprevious.length - 1];
+    let lastMouseY = mouseYprevious[mouseYprevious.length - 1];
 
     // Position der Maus relativ zum Mittelpunkt des Bildes berechnen
-    let mouseX = posX - centerX;
-    let mouseY = posY - centerY;
+    let mouseX = posX - lastMouseX;
+    let mouseY = posY - lastMouseY;
 
     // Winkel berechnen und um 90 Grad erhöhen
     let angle = Math.atan2(mouseY, mouseX);
@@ -40,6 +41,15 @@ document.addEventListener('mousemove', function(e) {
     // Bildposition aktualisieren
     cat.style.left = posX + 'px';
     cat.style.top = posY + 'px';
+
+    // Position des Mauszeigers speichern
+    mouseXprevious.unshift(posX);
+    mouseYprevious.unshift(posY);
+
+    // Begrenze die Anzahl der gespeicherten Positionen auf 5
+    // Je höher die Zahl, desto langsamer reagiert die Maus
+    mouseXprevious = mouseXprevious.slice(0, 8);
+    mouseYprevious = mouseYprevious.slice(0, 8);
 });
 
 // Laden der aktuellen Hoveranzahl
