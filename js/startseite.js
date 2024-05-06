@@ -1,16 +1,35 @@
-// POP UP beim Laden der Seite:
-document.addEventListener("DOMContentLoaded", function () {
-    openPopup();  // Zeige das Popup an, wenn die Seite geladen ist
-});
-
-function openPopup() {
+function openPopup(popup) {
     var popup = document.getElementById("popup");
 }
 
-function closePopup() {
+function closePopup(popup) {
     var popup = document.getElementById("popup");
     popup.style.display = "none";
 }
+
+//Pop up Fact beim Hover über Mausbild
+function openPopup_fact(popup_fact) {
+    var popup_fact = document.getElementById("popup_fact");
+    popup_fact.style.display = "flex";
+}
+
+function closePopup_fact(popup_fact) {
+    var popup_fact = document.getElementById("popup_fact");
+    popup_fact.style.display = "none";
+}
+
+// Füge einen Event-Listener zum Bild "mouse" hinzu
+document.getElementById("mouse").addEventListener("mouseover", function() {
+    openPopup_fact("popup_fact"); // Das Popup wird nur beim Hover über das Bild "mouse" angezeigt
+});
+
+document.getElementById("more_mice").addEventListener("click", function() {
+    closePopup_fact("popup_fact");
+});
+
+
+
+
 
 // Fenstergröße erheben
 let mouseXprevious = [0];
@@ -82,7 +101,6 @@ function handleMouseHover(event) {
         // Aktualisiere die Anzeige der Hoveranzahl auf dem Bildschirm
         updateHoverCount();
         
-        window.location.href = event.target.parentElement.href;
     }
 }
 
