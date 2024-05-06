@@ -39,6 +39,13 @@ function updateClickCount() {
     clickCount = parseInt(sessionStorage.getItem('clickCount'));
     // Aktualisieren der Anzeige der Klickanzahl auf dem Bildschirm
     document.getElementById("clickNumber").textContent = clickCount;
+   if (clickCount == 0) {
+        // Wenn der Klickzähler 0 ist, zeige das Popup an
+   document.getElementById("popup").style.display = "flex";
+  } else {
+        // Andernfalls, verstecke das Popup
+     document.getElementById("popup").style.display = "none";
+   }
 }
 
 function handleMouseClick(event) {
