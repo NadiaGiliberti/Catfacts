@@ -1,7 +1,7 @@
 const searchBox = document.querySelector('#searchBox');
 const catFactsApp = document.querySelector('#catFactsApp');
-let url = 'https://cat-fact.herokuapp.com/facts/random?amount=300'; // verlinkung zu IPA Datenbank (Fakten)
-let url_2 = 'https://api.thecatapi.com/v1/images/search?limit=10'; // verlinkung zu zweiter IPA Datenbank (Fotos)
+let url = 'https://cat-fact.herokuapp.com/facts/random?amount=300'; // verlinkung zu API Datenbank (Fakten)
+let url_2 = 'https://api.thecatapi.com/v1/images/search?limit=10'; // verlinkung zu zweiter API Datenbank (Fotos)
 
 init();
 
