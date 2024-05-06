@@ -87,6 +87,14 @@ function updateHoverCount() {
         // Andernfalls, verstecke das Popup
         document.getElementById("popup").style.display = "none";
     }
+
+    if (hoverCount > 0) {
+        // Wenn der Hoverzähler 0 ist, zeige das Popup an
+        document.getElementById("popup_fact").style.display = "flex";
+    } else {
+        // Andernfalls, verstecke das Popup
+        document.getElementById("popup_fact").style.display = "none";
+    }
 }
 
 function handleMouseHover(event) {
