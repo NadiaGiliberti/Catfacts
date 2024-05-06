@@ -126,3 +126,8 @@ p {
     font-size: 3vw;
 }
 
+#clickCount {
+    font-size: 6vw;
+    flex-direction: row;
+}
+
