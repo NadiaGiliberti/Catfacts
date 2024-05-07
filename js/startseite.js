@@ -1,3 +1,5 @@
+// POP UP BEIM LADEN DER SEITE
+
 function openPopup(popup) {
     var popup = document.getElementById("popup");
 }
@@ -7,7 +9,11 @@ function closePopup(popup) {
     popup.style.display = "none";
 }
 
-//Pop up Fact beim Hover über Mausbild
+document.getElementById("go_for_it").addEventListener("click", function() {
+    closePopup("popup");
+});
+
+//POP UP BEIM HOVER ÜBER DAS BILD MAUS
 function openPopup_fact(popup_fact) {
     var popup_fact = document.getElementById("popup_fact");
     popup_fact.style.display = "flex";
@@ -18,24 +24,23 @@ function closePopup_fact(popup_fact) {
     popup_fact.style.display = "none";
 }
 
-// Füge einen Event-Listener zum Bild "mouse" hinzu
+// EVENT FÜR HOVER ÜBER DAS BILD MAUS
 document.getElementById("mouse").addEventListener("mouseover", function() {
     openPopup_fact("popup_fact"); // Das Popup wird nur beim Hover über das Bild "mouse" angezeigt
 });
 
 document.getElementById("more_mice").addEventListener("click", function() {
     closePopup_fact("popup_fact");
+    init('https://cat-fact.herokuapp.com/facts/random?amount=300', 'https://api.thecatapi.com/v1/images/search?limit=10');
 });
 
 
-
-
+// KATZE AN CURSOR
 
 // Fenstergröße erheben
 let mouseXprevious = [0];
 let mouseYprevious = [0];
-
-// Katze an Cursor
+//Katze an Cursor fixieren
 let cat = document.querySelector('#cat');
 document.addEventListener('mousemove', function(e) {
     let posX = e.clientX;
@@ -70,6 +75,9 @@ document.addEventListener('mousemove', function(e) {
     mouseXprevious = mouseXprevious.slice(0, 8);
     mouseYprevious = mouseYprevious.slice(0, 8);
 });
+
+
+//HOVERZÄHLER
 
 // Laden der aktuellen Hoveranzahl
 var hoverCount = parseInt(sessionStorage.getItem('hoverCount')) || 0;
@@ -155,12 +163,14 @@ async function search(searchValue) {
 }
 
 function createItem(catFact, catImage) {
+    popupFact.innerHTML = '';
     let item = document.createElement('div');
     item.classList.add('catFact');
     let imageUrl = catImage && catImage.url ? catImage.url : 'URL nicht verfügbar';
     item.innerHTML = `
+    <img src="${imageUrl}" alt="Cat Image">
         <p>${catFact.text}</p>
-        <img src="${imageUrl}" alt="Cat Image">
+
         `;
     popupFact.appendChild(item);
 }
