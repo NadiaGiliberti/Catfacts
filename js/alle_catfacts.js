@@ -39,8 +39,8 @@ function createItem(catFact, catImage) {
     item.classList.add('catFact');
     let imageUrl = catImage && catImage.url ? catImage.url : 'URL nicht verfügbar';
     item.innerHTML = `
-        <p>${catFact.text}</p>
-        <img src="${imageUrl}" alt="Cat Image">
+    <img src="${imageUrl}" alt="Cat Image" class=catFact_image>
+        <p class=catFact_text>${catFact.text}</p>
         `;
     catFactsApp.appendChild(item);
 }

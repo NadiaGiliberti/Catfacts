@@ -1,19 +1,30 @@
 /* Ordnen der Inhalte von API */
 
 #catFactsApp {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 15px;
-    padding: 40px;
 }
 
 img {
     max-width: 100%;
 }
 
-#moreFacts {
+.moreFacts {
     font-size: 6vw;
-    max-width: 90%;
-    display: flex;
-    justify-self: flex-start;
+    margin: 10% 0%;
+    padding-left: 10%;
 }
+
+.catpaw_menu {
+    width: 8%;
+    margin-right: 2%;
+}
+
+.catFact {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#AC99BA;
+    gap: 15px;
+    border-radius: 10px;
+}
+
