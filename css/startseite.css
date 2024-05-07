@@ -95,13 +95,15 @@
     width: 3.5%;
 }
 
-.catpaw_menu {
-    width: 8%;
-    margin-right: 2%;
-}
 
 #catFact { 
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
+
+#hoverCount {
+    font-size: 6vw;
+    flex-direction: row;
+}
+

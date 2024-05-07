@@ -75,6 +75,11 @@ margin-bottom: 10%;
 
 }
 
+.catpaw_menu {
+    width: 8%;
+    margin-right: 2%;
+}
+
 .burger {
     cursor: pointer;
     z-index: 20;
@@ -125,10 +130,4 @@ h1 {
 p {
     font-size: 3vw;
 }
-
-#hoverCount {
-    font-size: 6vw;
-    flex-direction: row;
-}
-
 
