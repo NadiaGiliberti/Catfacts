@@ -10,3 +10,10 @@
 img {
     max-width: 100%;
 }
+
+#moreFacts {
+    font-size: 6vw;
+    max-width: 90%;
+    display: flex;
+    justify-self: flex-start;
+}
