@@ -99,3 +99,9 @@
     width: 8%;
     margin-right: 2%;
 }
+
+#catFact { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
