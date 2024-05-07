@@ -11,8 +11,9 @@ img {
 
 .moreFacts {
     font-size: 6vw;
+    max-width: 90%;
     margin: 10% 0%;
-    padding-left: 10%;
+    padding: 20px;
 }
 
 
