@@ -22,7 +22,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
 }
 
 .score {
@@ -71,7 +73,7 @@ margin-bottom: 10%;
     font-size: 6vw;
     text-decoration: none;
     color: #F6F5F1;
-    margin: 10px 0;
+    margin: 0 auto;
 
 }
 .catpaw_menu {
@@ -117,7 +119,7 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
 }
 

@@ -1,27 +1,41 @@
-/* Ordnen der Inhalte von API */
-
-#catFactsApp {
-    display: flex;
-    gap: 15px;
-}
-
-img {
-    max-width: 100%;
-}
-
+/* Header Schriftart */
 .moreFacts {
     font-size: 6vw;
-    max-width: 90%;
-    margin: 10% 0%;
-    padding: 20px;
 }
 
+/* Container über Seite */
+#catFactsApp { 
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
+/* Container für die beiden inhalte */
 .catFact {
     display: flex;
-    flex-wrap: wrap;
-    background-color:#AC99BA;
+    align-items: center;
+    width: 75vh;
+    height: 45vh;
+    background-color: #AC99BA;
     gap: 15px;
     border-radius: 10px;
+    padding: 2%;
 }
 
+/* Bild formatierung */
+.catFact_image {
+    width: 50%;
+    height: 50%;
+}
+
+/* Text formatierung */
+.catFact_text {
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Pfote zum neuladen*/
+.catpaw_reload {
+    width: 10%;
+}
