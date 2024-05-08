@@ -81,7 +81,6 @@ document.addEventListener('mousemove', function(e) {
 
 // Laden der aktuellen Hoveranzahl
 var hoverCount = parseInt(sessionStorage.getItem('hoverCount')) || 0;
-
 // Funktion zur Aktualisierung der Hoveranzahl-Anzeige
 function updateHoverCount() {
     // Laden der aktuellen Hoveranzahl
@@ -96,7 +95,8 @@ function updateHoverCount() {
         document.getElementById("popup").style.display = "none";
     }
 
-    if (hoverCount > 0) {
+    let url_param = window.location.search;
+    if (hoverCount > 0 && url_param !== '?popup=false') {
         // Wenn der Hoverzähler 0 ist, zeige das Popup an
         document.getElementById("popup_fact").style.display = "flex";
     } else {
@@ -197,6 +197,8 @@ async function fetchImage(url_2) {
         console.log(error);
     }
 }
+
+// MAUS AN ZUFÄLLIGER POSITION
 
 window.onload = function() {
     var bild = document.getElementById("mouse");
