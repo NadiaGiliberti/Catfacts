@@ -197,3 +197,15 @@ async function fetchImage(url_2) {
         console.log(error);
     }
 }
+
+window.onload = function() {
+    var bild = document.getElementById("mouse");
+
+    setInterval(function() {
+      var xPos = Math.random() * window.innerWidth;
+      var yPos = Math.random() * window.innerHeight;
+
+      bild.style.left = xPos + "px";
+      bild.style.top = yPos + "px";
+    }, 800); // Ändere die Geschwindigkeit der Bewegung, indem du die Zahl änderst (in Millisekunden)
+  }
