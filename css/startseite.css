@@ -84,11 +84,12 @@
     left: 50%;
     top: 50%;
     pointer-events: none;
-    width: 8%;
+    width: 10%;
 }
 
 #mouse {
-    width: 5%;
+    width: 15%;
+    padding: 30px;
 }
 
 #catpaw {
