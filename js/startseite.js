@@ -168,8 +168,8 @@ function createItem(catFact, catImage) {
     item.classList.add('catFact');
     let imageUrl = catImage && catImage.url ? catImage.url : 'URL nicht verfügbar';
     item.innerHTML = `
-    <img src="${imageUrl}" alt="Cat Image">
-        <p>${catFact.text}</p>
+    <img src="${imageUrl}" alt="Cat Image" class=catFact_image>
+        <p class=catFact_text>${catFact.text}</p>
 
         `;
     popupFact.appendChild(item);

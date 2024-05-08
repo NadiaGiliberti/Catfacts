@@ -12,7 +12,7 @@
 }
 
 /* Container der Facts*/
-#catFactsApp { 
+#catFactsApp {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -21,10 +21,11 @@
 /* Container pro Inhalt*/
 .catFact {
     display: flex;
+    justify-content: space-between;
     flex-wrap: nowrap;
     flex-grow: 1;
     width: 30vw;
-    height: 30vh;
+    height: 32vh;
     background-color: #AC99BA;
     gap: 10px;
     border-radius: 10px;
@@ -33,18 +34,19 @@
 
 /* Bild formatierung */
 .catFact_image {
-    flex-basis: 50%;
-    max-width: 50%;
+    max-width: 45%;
+    border-radius: 5px;
 }
 
 /* Text formatierung */
 .catFact_text {
-    padding: 15px;
-    flex-basis: 50%;
+    padding: 10px;
     flex-direction: column;
+    overflow: auto;
     gap: 10px;
-    overflow: auto; 
     font-size: 2vw;
+    max-width: 50%;
+    color: #F6F5F1;
 }
 
 /* Pfote zum neuladen*/
@@ -54,4 +56,35 @@
     align-items: flex-end;
     width: 5%;
     margin-top: 30px;
+}
+
+/* SEARCHBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(131, 131, 131);
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #F6F5F1;
+    border-radius: 10px;
+}
+
+/*** Tablet  ***/
+@media screen and (max-width: 768px) {
+
+
+}
+
+/*** Handy  ***/
+@media screen and (max-width: 576px) {
+
+
 }

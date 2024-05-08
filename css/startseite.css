@@ -95,7 +95,12 @@
     width: 12%;
     padding: 30px;
     position: absolute;
+<<<<<<< Updated upstream
     transition: left 2s, top 2s; /* Füge eine Übergangseigenschaft hinzu */
+=======
+    transition: left 1s, top 1s;
+    /* Füge eine Übergangseigenschaft hinzu */
+>>>>>>> Stashed changes
 }
 
 #catpaw {
@@ -103,14 +108,37 @@
 }
 
 
-#catFact { 
+#catFact {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: 30vw;
+    height: 32vh;
+    background-color: #AC99BA;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+/* Bild formatierung */
+.catFact_image {
+    max-width: 45%;
+    border-radius: 5px;
+}
+
+/* Text formatierung */
+.catFact_text {
+    padding: 10px;
+    flex-direction: column;
+    overflow: auto;
+    gap: 10px;
+    font-size: 2vw;
+    max-width: 50%;
+    color: #F6F5F1;
 }
 
 #hoverCount {
     font-size: 6vw;
     flex-direction: row;
 }
-
