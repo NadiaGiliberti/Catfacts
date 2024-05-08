@@ -3,6 +3,14 @@
     font-size: 6vw;
 }
 
+/* Container Main */
+.container_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Container über Seite */
 #catFactsApp { 
     display: flex;
@@ -13,9 +21,13 @@
 /* Container für die beiden inhalte */
 .catFact {
     display: flex;
-    align-items: center;
-    width: 75vh;
-    height: 45vh;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: 30vw;
+    height: 40vh;
     background-color: #AC99BA;
     gap: 15px;
     border-radius: 10px;
@@ -24,18 +36,24 @@
 
 /* Bild formatierung */
 .catFact_image {
-    width: 50%;
-    height: 50%;
+    max-width: 100%;
+    max-height: 80px;
 }
 
 /* Text formatierung */
 .catFact_text {
+    padding: 15px;
     flex-basis: 50%;
     flex-direction: column;
     gap: 10px;
+    overflow: auto; 
+    font-size: 2vw;
 }
 
 /* Pfote zum neuladen*/
 .catpaw_reload {
-    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 5%;
 }

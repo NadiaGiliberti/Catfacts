@@ -69,3 +69,14 @@ async function fetchImage(url_2) {
         console.log(error);
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Selektieren des Bildes
+    var reloadButton = document.getElementById("reloadButton");
+
+    // Hinzufügen eines Event-Listeners für den Klick auf das Bild
+    reloadButton.addEventListener("click", function() {
+        // Neuladen der Seite
+        location.reload();
+    });
+});

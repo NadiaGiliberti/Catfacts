@@ -1,3 +1,7 @@
+.score {
+    display: flex;
+}
+
 /* Popupfenster wenn die Seite geladen wird: */
 
 /* Popup Fenster */
@@ -88,7 +92,7 @@
 }
 
 #mouse {
-    width: 15%;
+    width: 12%;
     padding: 30px;
 }
 
