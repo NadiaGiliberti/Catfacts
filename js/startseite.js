@@ -202,12 +202,32 @@ async function fetchImage(url_2) {
 
 window.onload = function() {
     var bild = document.getElementById("mouse");
-
+    var aktuelleXPos = 0;
+    var aktuelleYPos = 0;
+    var schrittweite = 1000; // Die Distanz, um die sich das Bild bewegen soll
+  
     setInterval(function() {
-      var xPos = Math.random() * window.innerWidth;
-      var yPos = Math.random() * window.innerHeight;
-
-      bild.style.left = xPos + "px";
-      bild.style.top = yPos + "px";
+      var maxXPos = window.innerWidth - bild.width;
+      var maxYPos = window.innerHeight - bild.height;
+  
+      // Zufällige x- und y-Komponenten für die Bewegung
+      var deltaX = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
+      var deltaY = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
+  
+      // Neue Position berechnen
+      var neueXPos = aktuelleXPos + deltaX;
+      var neueYPos = aktuelleYPos + deltaY;
+  
+      // Begrenze die Position, damit das Bild im sichtbaren Bereich bleibt
+      neueXPos = Math.max(0, Math.min(maxXPos, neueXPos));
+      neueYPos = Math.max(0, Math.min(maxYPos, neueYPos));
+  
+      // Aktualisiere die Position des Bildes
+      bild.style.left = neueXPos + "px";
+      bild.style.top = neueYPos + "px";
+  
+      // Speichere die aktuelle Position
+      aktuelleXPos = neueXPos;
+      aktuelleYPos = neueYPos;
     }, 800); // Ändere die Geschwindigkeit der Bewegung, indem du die Zahl änderst (in Millisekunden)
   }

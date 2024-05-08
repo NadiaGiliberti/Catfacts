@@ -95,7 +95,7 @@
     width: 12%;
     padding: 30px;
     position: absolute;
-    transition: left 1s, top 1s; /* Füge eine Übergangseigenschaft hinzu */
+    transition: left 2s, top 2s; /* Füge eine Übergangseigenschaft hinzu */
 }
 
 #catpaw {
