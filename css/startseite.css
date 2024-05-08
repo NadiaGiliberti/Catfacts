@@ -142,3 +142,11 @@
     font-size: 6vw;
     flex-direction: row;
 }
+
+.popup-image {
+    position: absolute;
+    top: 25%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+    right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+    width: 10%; /* Breite des Bildes */
+    z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
+}
