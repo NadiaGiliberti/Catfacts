@@ -87,23 +87,45 @@
     /* Container pro Inhalt*/
     .catFact {
         width: 80vw;
-        gap: 7px;
+        gap: 10px;
         border-radius: 5px;
     }
 
-   /* Bild formatierung */
+    /* Bild formatierung */
     .catFact_image {
-       border-radius: 3px;
+        border-radius: 3px;
     }
 
     /* Text formatierung */
     .catFact_text {
-        padding: 7px;
-        gap: 7px;
+        padding: 8px;
+        gap: 8px;
         font-size: 4vw;
     }
 
 }
 
 /*** Handy  ***/
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+
+       /* Container pro Inhalt*/
+       .catFact {
+        width: 80vw;
+        gap: 10px;
+        border-radius: 5px;
+    }
+
+    /* Bild formatierung */
+    .catFact_image {
+        border-radius: 3px;
+    }
+
+    /* Text formatierung */
+    .catFact_text {
+        padding: 8px;
+        gap: 8px;
+        font-size: 4vw;
+    }
+
+
+}
