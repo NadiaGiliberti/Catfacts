@@ -62,7 +62,7 @@
     cursor: pointer;
 }
 
-/* SEARCHBAR */
+/* SCROLLBAR */
 
 /* width */
 ::-webkit-scrollbar {
@@ -124,7 +124,7 @@
     .catFact_text {
         padding: 8px;
         gap: 8px;
-        font-size: 4vw;
+        font-size: 8vw;
     }
 
 
