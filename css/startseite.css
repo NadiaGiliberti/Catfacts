@@ -155,7 +155,12 @@
     z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
 }
 
-<<<<<<< Updated upstream
+body {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    overflow: hidden; 
+}
 
 /*** Tablet  ***/
 @media screen and (max-width: 768px) {
@@ -167,11 +172,4 @@
 @media screen and (max-width: 576px) {
 
 
-=======
-body {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: top left;
-    overflow: hidden; 
->>>>>>> Stashed changes
 }
