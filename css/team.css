@@ -70,26 +70,62 @@
     border-radius: 10px;
 }
 
+/***Small Laptop  ***/
+@media screen and (max-width: 1024px) {
+
+    /* Text formatierung */
+    .catFactsApp p {
+        font-size: 3vw;
+    }
+
+}
+
+
 /*** Tablet  ***/
 @media screen and (max-width: 768px) {
 
     /* Container pro Inhalt*/
     .team_pictures {
         width: 80vw;
-        /* oder 100% für die gesamte Breite */
+        gap: 10px;
+        border-radius: 5px;
     }
 
+    /* Bild formatierung */
+    .team_image {
+        border-radius: 3px;
+    }
 
     /* Text formatierung */
     .catFactsApp p{
-        padding: 7px;
-        gap: 7px;
+        padding: 8px;
+        gap: 8px;
         font-size: 4vw;
-        max-width: 50%;
-        color: #F6F5F1;
     }
 
 }
 
 /*** Handy  ***/
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+
+       /* Container pro Inhalt*/
+       .team_pictures {
+        width: 80vw;
+        gap: 10px;
+        border-radius: 5px;
+    }
+
+    /* Bild formatierung */
+    .team_image {
+        border-radius: 3px;
+    }
+
+    /* Text formatierung */
+    .catFactsApp p{
+        padding: 8px;
+        gap: 8px;
+        font-size: 6vw;
+    }
+
+
+}
