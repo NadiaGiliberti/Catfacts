@@ -76,7 +76,6 @@ document.addEventListener('mousemove', function(e) {
     mouseYprevious = mouseYprevious.slice(0, 8);
 });
 
-
 //HOVERZÄHLER
 
 // Laden der aktuellen Hoveranzahl
@@ -132,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Füge den Eventlistener hinzu
     document.getElementById("mouse").addEventListener("mouseover", handleMouseHover);
 });
-
 
 const popupFact = document.querySelector('#catFact');
 
@@ -236,3 +234,5 @@ window.onload = function() {
       aktuelleYPos = neueYPos;
     }, 800); // Ändere die Geschwindigkeit der Bewegung, indem du die Zahl änderst (in Millisekunden)
   }
+
+

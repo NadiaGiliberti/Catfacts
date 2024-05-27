@@ -128,3 +128,32 @@ p {
     font-size: 3vw;
 }
 
+
+/*** Tablet ***/
+@media screen and (max-width: 820px) {
+
+
+}
+
+/*** Handy  ***/
+@media screen and (max-width: 576px) {
+    .burger .bar {
+        width: 15px;
+        height: 1.5px;
+        margin: 2.5px 0;
+    }
+
+    /* Styling für das Kreuzsymbol in der Handyansicht */
+    .burger.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(3px, 3px);
+    }
+
+    .burger.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(3px, -3px);
+    }
+    
+}
