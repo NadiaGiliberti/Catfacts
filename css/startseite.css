@@ -153,7 +153,11 @@
     right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
     width: 10%; /* Breite des Bildes */
     z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
-}
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10%px auto 0%;
+    }
 
 body {
     background-size: 100% 100%;
@@ -162,14 +166,84 @@ body {
     overflow: hidden; 
 }
 
-/*** Tablet  ***/
-@media screen and (max-width: 768px) {
+/*** small Laptop  ***/
+@media screen and (max-width: 1260px) {
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f5f1c4;
+        /* Hintergrundfarbe mit Transparenz für Overlay */
+        color: #F6F5F1;
+        z-index: 999;
+        /* Z-Index, um das Popup über anderen Inhalten zu platzieren */
+    }
 
+    .popup-image {
+        position: absolute;
+        top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        width: 10%; /* Breite des Bildes */
+        z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
+    }
+
+}
+
+/*** Tablet ***/
+@media screen and (max-width: 820px) {
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f5f1c4;
+        /* Hintergrundfarbe mit Transparenz für Overlay */
+        color: #F6F5F1;
+        z-index: 999;
+        /* Z-Index, um das Popup über anderen Inhalten zu platzieren */
+    }
+
+    .popup-image {
+        position: absolute;
+        top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        width: 10%; /* Breite des Bildes */
+        z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
+    }
 
 }
 
 /*** Handy  ***/
 @media screen and (max-width: 576px) {
+    .popup-image {
+        position: absolute;
+        top: 42%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        width: 10%; /* Breite des Bildes */
+        z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
+    }
+
+
+}
+
+/*** kleines Handy  ***/
+@media screen and (max-width: 200px) {
+    .popup-image {
+        position: absolute;
+        top: 50%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        width: 10%; /* Breite des Bildes */
+        z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
+    }
 
 
 }

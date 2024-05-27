@@ -34,10 +34,11 @@
 
 /* Bild formatierung */
 .catFact_image {
-    max-width: 45%;
+    max-width: 48%;
     height: auto;
     border-radius: 5px;
-    object-fit: contain;
+    align-items: flex-start;
+    object-fit: cover;
 }
 
 /* Text formatierung */
@@ -47,7 +48,7 @@
     overflow: auto;
     gap: 10px;
     font-size: 2vw;
-    max-width: 50%;
+    max-width: 48%;
     color: #F6F5F1;
 }
 
@@ -61,7 +62,7 @@
     cursor: pointer;
 }
 
-/* SEARCHBAR */
+/* SCROLLBAR */
 
 /* width */
 ::-webkit-scrollbar {
@@ -86,20 +87,45 @@
     /* Container pro Inhalt*/
     .catFact {
         width: 80vw;
-        /* oder 100% für die gesamte Breite */
+        gap: 10px;
+        border-radius: 5px;
     }
 
+    /* Bild formatierung */
+    .catFact_image {
+        border-radius: 3px;
+    }
 
     /* Text formatierung */
     .catFact_text {
-        padding: 7px;
-        gap: 7px;
+        padding: 8px;
+        gap: 8px;
         font-size: 4vw;
-        max-width: 50%;
-        color: #F6F5F1;
     }
 
 }
 
 /*** Handy  ***/
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+
+       /* Container pro Inhalt*/
+       .catFact {
+        width: 80vw;
+        gap: 10px;
+        border-radius: 5px;
+    }
+
+    /* Bild formatierung */
+    .catFact_image {
+        border-radius: 3px;
+    }
+
+    /* Text formatierung */
+    .catFact_text {
+        padding: 8px;
+        gap: 8px;
+        font-size: 6vw;
+    }
+
+
+}
