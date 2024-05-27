@@ -5,16 +5,9 @@
 
 
 /* Bilder Gruppenmitglieder */
-#rabih {
+.team_image {
     width: 30%;
 }
-
-#suena {
-    width: 30%;
-}
-
-#nadia {
-    width: 30%;}
 
 .team_pictures {
     display: flex;
@@ -33,13 +26,9 @@
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-}
-
-.catFactsApp {
     padding: 10px;
     flex-direction: column;
     overflow: auto;
-    gap: 10px;
     font-size: 2vw;
     max-width: 50%;
     color: #F6F5F1;
