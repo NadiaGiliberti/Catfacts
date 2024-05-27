@@ -81,6 +81,17 @@
     border-radius: 10px;
 }
 
+/***Small Laptop  ***/
+@media screen and (max-width: 1024px) {
+
+    /* Text formatierung */
+    .catFact_text {
+        font-size: 3vw;
+    }
+
+}
+
+
 /*** Tablet  ***/
 @media screen and (max-width: 768px) {
 
