@@ -35,7 +35,9 @@
 /* Bild formatierung */
 .catFact_image {
     max-width: 45%;
+    height: auto;
     border-radius: 5px;
+    object-fit: contain;
 }
 
 /* Text formatierung */
@@ -81,11 +83,28 @@
 /*** Tablet  ***/
 @media screen and (max-width: 768px) {
 
+    /* Container pro Inhalt*/
+    .catFact {
+        width: 80vw;
+        /* oder 100% für die gesamte Breite */
+    }
+
+    /* Bild formatierung */
+    .catFact_image {
+
+
+    }
+
+    /* Text formatierung */
+    .catFact_text {
+        padding: 7px;
+        gap: 7px;
+        font-size: 4vw;
+        max-width: 50%;
+        color: #F6F5F1;
+    }
 
 }
 
 /*** Handy  ***/
-@media screen and (max-width: 576px) {
-
-
-}
+@media screen and (max-width: 576px) {}
