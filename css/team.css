@@ -5,7 +5,42 @@
 
 
 /* Bilder Gruppenmitglieder */
+#rabih {
+    width: 30%;
+}
+
+#suena {
+    width: 30%;
+}
+
+#nadia {
+    width: 30%;}
 
 .team_pictures {
-    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: 30vw;
+    height: 32vh;
+    background-color: #AC99BA;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+#catFactsApp {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.catFactsApp {
+    padding: 10px;
+    flex-direction: column;
+    overflow: auto;
+    gap: 10px;
+    font-size: 2vw;
+    max-width: 50%;
+    color: #F6F5F1;
 }
