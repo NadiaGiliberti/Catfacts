@@ -30,6 +30,13 @@
     width: 70%;
 }
 
+.popup-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10%px auto 0%;
+}
+
 /* Button beim Popup */
 #go_for_it {
     font-family: tell_me_a_joke;
@@ -37,7 +44,7 @@
     color: #F6F5F1;
     font-size: 3vw;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 2%;
     padding: 10px;
     border: none;
 }
@@ -107,6 +114,7 @@
 #catFact {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     flex-wrap: nowrap;
     flex-grow: 1;
     width: 30vw;
@@ -145,4 +153,17 @@
     right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
     width: 10%; /* Breite des Bildes */
     z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
+}
+
+
+/*** Tablet  ***/
+@media screen and (max-width: 768px) {
+
+
+}
+
+/*** Handy  ***/
+@media screen and (max-width: 576px) {
+
+
 }
