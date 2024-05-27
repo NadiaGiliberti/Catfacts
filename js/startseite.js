@@ -102,7 +102,12 @@ function updateHoverCount() {
     } else {
         // Andernfalls, verstecke das Popup
         document.getElementById("popup_fact").style.display = "none";
+
+        if (url_param === '?popup=false') {
+            let new_url = window.location.origin + window.location.pathname;
+            window.history.replaceState(null, '', new_url);
     }
+}
 }
 
 function handleMouseHover(event) {
