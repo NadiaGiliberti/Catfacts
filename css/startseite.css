@@ -231,6 +231,13 @@ body {
         width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
+    #mouse {
+        width: 22%;
+        padding: 30px;
+        position: absolute;
+        transition: left 1s, top 1s;
+        /* Füge eine Übergangseigenschaft hinzu */
+    }
 
 
 }

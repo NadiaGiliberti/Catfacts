@@ -41,8 +41,10 @@ let mouseXprevious = [0];
 let mouseYprevious = [0];
 //Katze an Cursor fixieren
 let cat = document.querySelector('#cat');
+document.addEventListener('mousemove', function(e) {
+    let posX = e.clientX;
+    let posY = e.clientY;
 
-function moveCat(posX, posY) {
     let lastMouseX = mouseXprevious[mouseXprevious.length - 1];
     let lastMouseY = mouseYprevious[mouseYprevious.length - 1];
 
@@ -71,22 +73,9 @@ function moveCat(posX, posY) {
     // Je höher die Zahl, desto langsamer reagiert die Maus
     mouseXprevious = mouseXprevious.slice(0, 8);
     mouseYprevious = mouseYprevious.slice(0, 8);
-}
-
-document.addEventListener('mousemove', function(e) {
-    moveCat(e.clientX, e.clientY);
 });
 
-document.addEventListener('touchmove', function(e) {
-    // Prevent the default behavior of touch events to avoid scrolling while dragging
-    e.preventDefault();
-    if (e.touches.length > 0) {
-        let touch = e.touches[0];
-        moveCat(touch.clientX, touch.clientY);
-    }
-});
-
-// HOVERZÄHLER
+//HOVERZÄHLER
 
 // Laden der aktuellen Hoveranzahl
 var hoverCount = parseInt(sessionStorage.getItem('hoverCount')) || 0;
@@ -115,8 +104,8 @@ function updateHoverCount() {
         if (url_param === '?popup=false') {
             let new_url = window.location.origin + window.location.pathname;
             window.history.replaceState(null, '', new_url);
-        }
     }
+}
 }
 
 function handleMouseHover(event) {
@@ -130,6 +119,7 @@ function handleMouseHover(event) {
 
         // Aktualisiere die Anzeige der Hoveranzahl auf dem Bildschirm
         updateHoverCount();
+        
     }
 }
 
@@ -139,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
     updateHoverCount();
     // Füge den Eventlistener hinzu
     document.getElementById("mouse").addEventListener("mouseover", handleMouseHover);
-    document.getElementById("mouse").addEventListener("touchstart", handleMouseHover); // Für Touch-Geräte
 });
 
 const popupFact = document.querySelector('#catFact');
@@ -150,7 +139,7 @@ async function init(url, url_2) {
     let catFacts = await fetchData(url);
     let catImages = await fetchImage(url_2);
     console.log(catFacts[0].text);
-    console.log(catImages);
+    console.log(catImages); 
     if (catFacts.length > 0 && catImages && catImages.length > 0) {
         for (let i = 0; i < 1; i++) {
             if (catImages[i] && catImages[i].url) {
@@ -183,7 +172,8 @@ function createItem(catFact, catImage) {
     item.innerHTML = `
     <img src="${imageUrl}" alt="Cat Image" class=catFact_image>
         <p class=catFact_text>${catFact.text}</p>
-    `;
+
+        `;
     popupFact.appendChild(item);
 }
 
@@ -217,29 +207,29 @@ window.onload = function() {
     var aktuelleXPos = 0;
     var aktuelleYPos = 0;
     var schrittweite = 1000; // Die Distanz, um die sich das Bild bewegen soll
-
+  
     setInterval(function() {
-        var maxXPos = window.innerWidth - bild.width;
-        var maxYPos = window.innerHeight - bild.height;
-
-        // Zufällige x- und y-Komponenten für die Bewegung
-        var deltaX = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
-        var deltaY = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
-
-        // Neue Position berechnen
-        var neueXPos = aktuelleXPos + deltaX;
-        var neueYPos = aktuelleYPos + deltaY;
-
-        // Begrenze die Position, damit das Bild im sichtbaren Bereich bleibt
-        neueXPos = Math.max(0, Math.min(maxXPos, neueXPos));
-        neueYPos = Math.max(0, Math.min(maxYPos, neueYPos));
-
-        // Aktualisiere die Position des Bildes
-        bild.style.left = neueXPos + "px";
-        bild.style.top = neueYPos + "px";
-
-        // Speichere die aktuelle Position
-        aktuelleXPos = neueXPos;
-        aktuelleYPos = neueYPos;
+      var maxXPos = window.innerWidth - bild.width;
+      var maxYPos = window.innerHeight - bild.height;
+  
+      // Zufällige x- und y-Komponenten für die Bewegung
+      var deltaX = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
+      var deltaY = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
+  
+      // Neue Position berechnen
+      var neueXPos = aktuelleXPos + deltaX;
+      var neueYPos = aktuelleYPos + deltaY;
+  
+      // Begrenze die Position, damit das Bild im sichtbaren Bereich bleibt
+      neueXPos = Math.max(0, Math.min(maxXPos, neueXPos));
+      neueYPos = Math.max(0, Math.min(maxYPos, neueYPos));
+  
+      // Aktualisiere die Position des Bildes
+      bild.style.left = neueXPos + "px";
+      bild.style.top = neueYPos + "px";
+  
+      // Speichere die aktuelle Position
+      aktuelleXPos = neueXPos;
+      aktuelleYPos = neueYPos;
     }, 800); // Ändere die Geschwindigkeit der Bewegung, indem du die Zahl änderst (in Millisekunden)
-}
+  }
