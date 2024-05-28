@@ -179,6 +179,12 @@ body {
     margin-top: 2%;
     padding: 10px;
     border: none;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+#more_mice:hover {
+    background-color: #808080; /* Change background to gray on hover */
 }
 
 /* SCROLLBAR */
