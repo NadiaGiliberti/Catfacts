@@ -294,7 +294,7 @@ body {
         position: absolute;
         top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
-        width: 100%; /* Breite des Bildes */
+        width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
     #mouse {
