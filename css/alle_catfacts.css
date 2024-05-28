@@ -119,8 +119,8 @@
 /*** Handy  ***/
 @media screen and (max-width: 576px) {
 
-       /* Container pro Inhalt*/
-       .catFact {
+    /* Container pro Inhalt*/
+    .catFact {
         width: 80vw;
         gap: 10px;
         border-radius: 5px;
@@ -138,5 +138,10 @@
         font-size: 6vw;
     }
 
+    /* Pfote zum neuladen*/
+    .catpaw_reload {
+        width: 10%;
+        padding-bottom: 10px;
+    }
 
 }
