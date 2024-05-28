@@ -163,7 +163,6 @@ body {
     overflow: auto;
     gap: 10px;
     font-size: 2vw;
-    max-width: 50%;
     height: 300px;
     color: #F6F5F1;
     text-align: left;
@@ -232,6 +231,22 @@ body {
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
 
+    /* Popup Catfact */
+.popup-content_fact {
+    height: 500px;
+}
+
+/* Bild formatierung */
+.catFact_image {
+    height: 200px;
+}
+
+/* Text formatierung */
+.catFact_text {
+    height: 200px;
+    font-size: 3vw;
+}
+
 }
 
 /*** Tablet ***/
@@ -260,6 +275,16 @@ body {
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
 
+/* Popup Catfact */
+.popup-content_fact {
+    height: 450px;
+}
+
+/* Bild formatierung */
+.catFact_image {
+    height: 200px;
+}
+
 }
 
 /*** Handy  ***/
@@ -269,7 +294,7 @@ body {
         position: absolute;
         top: 42%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
-        width: 10%; /* Breite des Bildes */
+        width: 100%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
     #mouse {
@@ -280,8 +305,27 @@ body {
         /* Füge eine Übergangseigenschaft hinzu */
     }
 
+.catFact {
+    flex-direction: column;
+}
+
+/* Bild formatierung */
+.catFact_image {
+    height: 150px;
+    width: 100%;
+}
+/* Text formatierung */
+.catFact_text {
+    height: 100px;
+    width: 100%;
+}
+/* Button formatierung */
+#more_mice {
+    padding: 10px;
+}
 
 }
+
 
 /*** kleines Handy  ***/
 @media screen and (max-width: 200px) {
