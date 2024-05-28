@@ -208,8 +208,8 @@ window.onload = function() {
     var aktuelleYPos = 0;
     
     setInterval(function() {
-        var maxXPos = window.innerWidth - bild.width;
-        var maxYPos = window.innerHeight - bild.height;
+        var maxXPos = window.innerWidth - bild.width - 50;
+        var maxYPos = window.innerHeight - bild.height - 50;
         
         // Zufällige Schrittweite zwischen 300 und 1200 Pixel
         var schrittweiteX = Math.random() * 900 + 300;
@@ -232,8 +232,8 @@ window.onload = function() {
         }
         
         // Begrenze die Position, damit das Bild im sichtbaren Bereich bleibt
-        neueXPos = Math.max(0, Math.min(maxXPos, neueXPos));
-        neueYPos = Math.max(0, Math.min(maxYPos, neueYPos));
+        neueXPos = Math.max(50, Math.min(maxXPos, neueXPos));
+        neueYPos = Math.max(50, Math.min(maxYPos, neueYPos));
         
         // Aktualisiere die Position des Bildes
         bild.style.left = neueXPos + "px";

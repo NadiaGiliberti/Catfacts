@@ -169,7 +169,9 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top left;
-    overflow: hidden; 
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh; 
 }
 
 /*** small Laptop  ***/
@@ -230,6 +232,7 @@ body {
 
 /*** Handy  ***/
 @media screen and (max-width: 576px) {
+
     .popup-image {
         position: absolute;
         top: 42%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
