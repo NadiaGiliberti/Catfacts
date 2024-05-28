@@ -206,30 +206,41 @@ window.onload = function() {
     var bild = document.getElementById("mouse");
     var aktuelleXPos = 0;
     var aktuelleYPos = 0;
-    var schrittweite = 1000; // Die Distanz, um die sich das Bild bewegen soll
-  
+    
     setInterval(function() {
-      var maxXPos = window.innerWidth - bild.width;
-      var maxYPos = window.innerHeight - bild.height;
-  
-      // Zufällige x- und y-Komponenten für die Bewegung
-      var deltaX = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
-      var deltaY = (Math.random() < 0.5 ? -1 : 1) * schrittweite;
-  
-      // Neue Position berechnen
-      var neueXPos = aktuelleXPos + deltaX;
-      var neueYPos = aktuelleYPos + deltaY;
-  
-      // Begrenze die Position, damit das Bild im sichtbaren Bereich bleibt
-      neueXPos = Math.max(0, Math.min(maxXPos, neueXPos));
-      neueYPos = Math.max(0, Math.min(maxYPos, neueYPos));
-  
-      // Aktualisiere die Position des Bildes
-      bild.style.left = neueXPos + "px";
-      bild.style.top = neueYPos + "px";
-  
-      // Speichere die aktuelle Position
-      aktuelleXPos = neueXPos;
-      aktuelleYPos = neueYPos;
-    }, 800); // Ändere die Geschwindigkeit der Bewegung, indem du die Zahl änderst (in Millisekunden)
-  }
+        var maxXPos = window.innerWidth - bild.width;
+        var maxYPos = window.innerHeight - bild.height;
+        
+        // Zufällige Schrittweite zwischen 300 und 1200 Pixel
+        var schrittweiteX = Math.random() * 900 + 300;
+        var schrittweiteY = Math.random() * 900 + 300;
+        
+        // Zufällige x- und y-Komponenten für die Bewegung
+        var deltaX = (Math.random() < 0.5 ? -1 : 1) * schrittweiteX;
+        var deltaY = (Math.random() < 0.5 ? -1 : 1) * schrittweiteY;
+        
+        // Neue Position berechnen
+        var neueXPos = aktuelleXPos + deltaX;
+        var neueYPos = aktuelleYPos + deltaY;
+
+        // Wenn die neue Position nahe der aktuellen Position ist, Schrittweite vergrößern
+        while (Math.abs(neueXPos - aktuelleXPos) < 100 || Math.abs(neueYPos - aktuelleYPos) < 100) {
+            deltaX = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 900 + 300);
+            deltaY = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 900 + 300);
+            neueXPos = aktuelleXPos + deltaX;
+            neueYPos = aktuelleYPos + deltaY;
+        }
+        
+        // Begrenze die Position, damit das Bild im sichtbaren Bereich bleibt
+        neueXPos = Math.max(0, Math.min(maxXPos, neueXPos));
+        neueYPos = Math.max(0, Math.min(maxYPos, neueYPos));
+        
+        // Aktualisiere die Position des Bildes
+        bild.style.left = neueXPos + "px";
+        bild.style.top = neueYPos + "px";
+        
+        // Speichere die aktuelle Position
+        aktuelleXPos = neueXPos;
+        aktuelleYPos = neueYPos;
+    }, 500); // Bewegungsgeschwindigkeit (in Millisekunden)
+}
