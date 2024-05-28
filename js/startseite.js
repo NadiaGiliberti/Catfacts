@@ -172,7 +172,6 @@ function createItem(catFact, catImage) {
     item.innerHTML = `
     <img src="${imageUrl}" alt="Cat Image" class=catFact_image>
         <p class=catFact_text>${catFact.text}</p>
-
         `;
     popupFact.appendChild(item);
 }
