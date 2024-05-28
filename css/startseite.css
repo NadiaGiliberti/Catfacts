@@ -127,6 +127,7 @@ body {
     border-radius: 5px;
     text-align: center;
     width: 70%;
+    height: 700px;
 }
 
 /* Div für API Inhalte */
@@ -134,7 +135,6 @@ body {
     display: flex;
     width: 100%; /* increased from 50vw */
     height: 50%; /* increased from 32vh */
-    background-color: #AC99BA;
     gap: 10px;
     border-radius: 10px;
     padding: 2%;
@@ -143,8 +143,8 @@ body {
 
 /* Bild formatierung */
 .catFact_image {
-    max-width: 48%;
-    max-height: 400px;
+    width: 45%;
+    height: 300px;
     border-radius: 5px;
     align-items: flex-start;
     object-fit: cover;
@@ -158,6 +158,7 @@ body {
     gap: 10px;
     font-size: 2vw;
     max-width: 50%;
+    height: 300px;
     color: #F6F5F1;
     text-align: left;
 }
@@ -169,12 +170,29 @@ body {
     color: #F6F5F1;
     font-size: 3vw;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 2%;
     padding: 10px;
     border: none;
 }
 
+/* SCROLLBAR */
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(131, 131, 131);
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #F6F5F1;
+    border-radius: 10px;
+}
 
 /*** small Laptop  ***/
 @media screen and (max-width: 1260px) {
