@@ -226,7 +226,7 @@ body {
 
     .popup-image {
         position: absolute;
-        top: 38%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        top: 30%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 17%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
@@ -254,8 +254,8 @@ body {
 
     .popup-image {
         position: absolute;
-        top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
-        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        top: 35%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 19%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
@@ -267,7 +267,7 @@ body {
 
     .popup-image {
         position: absolute;
-        top: 42%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
@@ -287,11 +287,10 @@ body {
 @media screen and (max-width: 200px) {
     .popup-image {
         position: absolute;
-        top: 50%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
-        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 10%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
-
 
 }
