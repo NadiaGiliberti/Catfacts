@@ -1,5 +1,44 @@
+body {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh; 
+}
+
 .score {
     display: flex;
+}
+
+#catpaw {
+    width: 3.5%;
+}
+
+#hoverCount {
+    font-size: 6vw;
+    flex-direction: row;
+}
+
+/* Katzenbild am Cursor */
+
+#cat {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    pointer-events: none;
+    width: 10%;
+}
+
+/* flüchtende Maus */
+
+#mouse {
+    width: 12%;
+    padding: 30px;
+    position: absolute;
+    transition: left 1s, top 1s;
+    /* Füge eine Übergangseigenschaft hinzu */
 }
 
 /* Popupfenster wenn die Seite geladen wird: */
@@ -30,18 +69,25 @@
     width: 70%;
 }
 
+/* Popup Infotext how to play */
 .popup_text {
     margin-left: 25%;
     margin-right: 25%;  
 }
 
+/* Popup bild Katze und Maus */
+
 .popup-image {
+    position: absolute;
+    top: 20%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+    right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+    width: 10%; /* Breite des Bildes */
+    z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     max-width: 100%;
     height: auto;
     display: block;
     margin: 10%px auto 0%;
-}
-
+    }
 
 /* Button beim Popup */
 #go_for_it {
@@ -55,7 +101,9 @@
     border: none;
 }
 
-/* Popup Fenster Catfact */
+/* Popupfenster CatFact: */
+
+/* Popup für Catfact */
 .popup_fact {
     position: fixed;
     top: 0;
@@ -81,53 +129,15 @@
     width: 70%;
 }
 
-/* Button beim Popup Catfact */
-#more_mice {
-    font-family: tell_me_a_joke;
-    background-color: #000000;
-    color: #F6F5F1;
-    font-size: 3vw;
-    border-radius: 10px;
-    margin-top: 10%;
-    padding: 10px;
-    border: none;
-}
-
-/* Katzenbild */
-
-#cat {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    pointer-events: none;
-    width: 10%;
-}
-
-#mouse {
-    width: 12%;
-    padding: 30px;
-    position: absolute;
-    transition: left 1s, top 1s;
-    /* Füge eine Übergangseigenschaft hinzu */
-}
-
-#catpaw {
-    width: 3.5%;
-}
-
-
-#catFact {
+/* Div für API Inhalte */
+.catFact {
+    display: flex;
     width: 100%; /* increased from 50vw */
     height: 50%; /* increased from 32vh */
     background-color: #AC99BA;
     gap: 10px;
     border-radius: 10px;
     padding: 2%;
-}
-
-.catFact {
-    display: flex;
     justify-content: space-between;
 }
 
@@ -152,32 +162,19 @@
     text-align: left;
 }
 
-#hoverCount {
-    font-size: 6vw;
-    flex-direction: row;
+/* Button beim Popup Catfact */
+#more_mice {
+    font-family: tell_me_a_joke;
+    background-color: #000000;
+    color: #F6F5F1;
+    font-size: 3vw;
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 10px;
+    border: none;
 }
 
-.popup-image {
-    position: absolute;
-    top: 20%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
-    right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
-    width: 10%; /* Breite des Bildes */
-    z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10%px auto 0%;
-    }
 
-
-body {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: top left;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh; 
-}
 
 /*** small Laptop  ***/
 @media screen and (max-width: 1260px) {
