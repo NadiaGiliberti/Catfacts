@@ -30,12 +30,18 @@
     width: 70%;
 }
 
+.popup_text {
+    margin-left: 25%;
+    margin-right: 25%;  
+}
+
 .popup-image {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 10%px auto 0%;
 }
+
 
 /* Button beim Popup */
 #go_for_it {
@@ -149,7 +155,7 @@
 
 .popup-image {
     position: absolute;
-    top: 25%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+    top: 20%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
     right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
     width: 10%; /* Breite des Bildes */
     z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
@@ -186,8 +192,8 @@ body {
 
     .popup-image {
         position: absolute;
-        top: 40%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
-        right: 20%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
+        top: 38%; /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
+        right: 17%; /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%; /* Breite des Bildes */
         z-index: 9999; /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
