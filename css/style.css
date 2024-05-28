@@ -70,8 +70,13 @@ margin-bottom: 10%;
     text-decoration: none;
     color: #F6F5F1;
     margin: 0 auto;
-
 }
+
+.navigation-link:hover {
+    color: #000;
+    transition: color 0.3s;
+}
+
 .catpaw_menu {
     width: 8%;
     margin-right: 2%;
