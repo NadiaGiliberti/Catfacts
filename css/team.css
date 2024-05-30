@@ -13,8 +13,10 @@
 /* Bilder Gruppenmitglieder */
 .team_image {
     width: 20%;
-    height: auto; /* Maintains the aspect ratio of the image */
-    object-fit: contain; /* Ensures the image covers the container without distortion */
+    height: auto;
+    /* Maintains the aspect ratio of the image */
+    object-fit: contain;
+    /* Ensures the image covers the container without distortion */
     border-radius: 10px;
 }
 
@@ -42,8 +44,10 @@
 #catFactsApp p {
     display: flex;
     gap: 10px;
-    justify-content: center; /* Centers the articles horizontally */
-    align-items: center; /* Centers the articles vertically */
+    justify-content: center;
+    /* Centers the articles horizontally */
+    align-items: center;
+    /* Centers the articles vertically */
     flex-wrap: wrap;
     padding: 10px;
     flex-direction: column;
@@ -98,11 +102,11 @@
     .team_image {
         width: 30%;
         border-radius: 3px;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     /* Text formatierung */
-    #catFactsApp p{
+    #catFactsApp p {
         font-size: 4vw;
         padding: 8px;
         gap: 8px;
@@ -113,8 +117,8 @@
 /*** Handy  ***/
 @media screen and (max-width: 576px) {
 
-       /* Container pro Inhalt*/
-       .team_pictures {
+    /* Container pro Inhalt*/
+    .team_pictures {
         flex-direction: column;
         width: 80vw;
         gap: 10px;
@@ -125,11 +129,11 @@
     .team_image {
         width: 30%;
         border-radius: 3px;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     /* Text formatierung */
-    #catFactsApp p{
+    #catFactsApp p {
         font-size: 6vw;
         padding: 8px;
         gap: 8px;
