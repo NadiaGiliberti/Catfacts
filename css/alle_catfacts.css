@@ -1,6 +1,5 @@
-/* Header Schriftart */
 .moreFacts {
-    font-size: 6rem; /* Verwende rem für bessere Skalierbarkeit */
+    font-size: 6vw;
 }
 
 /* Container Main */
@@ -11,21 +10,21 @@
     align-items: center;
 }
 
-/* Container der Facts */
+/* Container der Facts*/
 #catFactsApp {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-/* Container pro Inhalt */
+/* Container pro Inhalt*/
 .catFact {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-grow: 1;
-    width: 30rem; /* Verwende rem für bessere Skalierbarkeit */
-    height: 32rem; /* Verwende rem für bessere Skalierbarkeit */
+    width: 30vw;
+    height: 32vh;
     background-color: #AC99BA;
     gap: 10px;
     border-radius: 10px;
@@ -44,16 +43,15 @@
 /* Text formatierung */
 .catFact_text {
     padding: 10px;
-    display: flex;
     flex-direction: column;
     overflow: auto;
     gap: 10px;
-    font-size: 1.5rem; /* Verwende rem für bessere Skalierbarkeit */
+    font-size: 2vw;
     max-width: 48%;
     color: #F6F5F1;
 }
 
-/* Pfote zum Neuladen */
+/* Pfote zum neuladen*/
 .catpaw_reload {
     display: flex;
     justify-content: flex-end;
@@ -65,7 +63,7 @@
 
 /* SCROLLBAR */
 
-/* Width */
+/* width */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -82,54 +80,67 @@
     border-radius: 10px;
 }
 
-/* Medienabfragen */
-
-/* Small Laptop */
+/***Small Laptop  ***/
 @media screen and (max-width: 1024px) {
+
+    /* Text formatierung */
     .catFact_text {
-        font-size: 2rem; /* Verwende rem für bessere Skalierbarkeit */
+        font-size: 3vw;
     }
+
 }
 
-/* Tablet */
+
+/*** Tablet  ***/
 @media screen and (max-width: 768px) {
+
+    /* Container pro Inhalt*/
     .catFact {
         width: 80vw;
         gap: 10px;
         border-radius: 5px;
     }
 
+    /* Bild formatierung */
     .catFact_image {
         border-radius: 3px;
     }
 
+    /* Text formatierung */
     .catFact_text {
         padding: 8px;
         gap: 8px;
-        font-size: 2.5rem; /* Verwende rem für bessere Skalierbarkeit */
+        font-size: 4vw;
     }
+
 }
 
-/* Handy */
+/*** Handy  ***/
 @media screen and (max-width: 576px) {
+
+    /* Container pro Inhalt*/
     .catFact {
         width: 80vw;
         gap: 10px;
         border-radius: 5px;
     }
 
+    /* Bild formatierung */
     .catFact_image {
         border-radius: 3px;
     }
 
+    /* Text formatierung */
     .catFact_text {
         padding: 8px;
         gap: 8px;
-        font-size: 3rem; /* Verwende rem für bessere Skalierbarkeit */
+        font-size: 6vw;
     }
 
+    /* Pfote zum neuladen*/
     .catpaw_reload {
         width: 10%;
         padding-bottom: 10px;
     }
+
 }
