@@ -6,14 +6,12 @@
 }
 
 /* Schriftart Einfügen */
-
 @font-face {
     font-family: 'tell_me_a_joke';
     src: url('../schriften/tell_me_a_joke.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 
 /* HEADER */
 
@@ -27,32 +25,22 @@ nav {
     margin: 0 auto;
 }
 
-/* Burgermenu rechts*/
-
+/* Burgermenu rechts */
 .menu {
     display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    /* Das Menü erstreckt sich über die gesamte Höhe des Bildschirms */
     width: 50%;
-    /* Das Menü nimmt die Hälfte der Bildschirmbreite ein */
     z-index: 10;
-    /* Stellen Sie sicher, dass das Menü über anderen Inhalten liegt */
     background-color: #AC99BA;
-    /* Hintergrundfarbe des Menüs */
     flex-direction: column;
-    /* Menüinhalte in einer Spalte anordnen */
     padding: 20px;
-    /* Platzierung des Inhalts innerhalb des Menüs */
 }
 
 .menu.active {
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    background-color: #AC99BA;
 }
 
 ul {
@@ -61,9 +49,8 @@ ul {
 }
 
 li h1 {
-margin-bottom: 10%;
+    margin-bottom: 10%;
 }
-
 
 .navigation-link {
     font-size: 6vw;
@@ -96,7 +83,6 @@ margin-bottom: 10%;
     }
 }
 
-
 .burger {
     cursor: pointer;
     z-index: 20;
@@ -111,8 +97,6 @@ margin-bottom: 10%;
     z-index: 20;
 }
 
-
-
 /* Styling für das Kreuzsymbol */
 .burger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
@@ -126,11 +110,9 @@ margin-bottom: 10%;
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-
 /* Style Allgemeine */
-
 body {
-    font-family: tell_me_a_joke;
+    font-family: 'tell_me_a_joke', sans-serif;
     background-color: #F6F5F1;
 }
 
@@ -138,7 +120,6 @@ body {
     width: 90%;
     margin: 0 auto;
 }
-
 
 h1 {
     font-size: 6vw;
@@ -148,18 +129,14 @@ p {
     font-size: 3vw;
 }
 
-
-
 /*** Tablet ***/
 @media screen and (max-width: 820px) {
-
     p {
         font-size: 4vw;
     }
-
 }
 
-/*** Handy  ***/
+/*** Handy ***/
 @media screen and (max-width: 576px) {
     .burger .bar {
         width: 15px;
@@ -183,5 +160,4 @@ p {
     p {
         font-size: 5vw;
     }
-    
 }

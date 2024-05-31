@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatFacts API</title>
+    <meta name="description" content="Play and learn with CatFacts API - catch the mouse to unlock interesting cat facts!">
+    <meta property="og:title" content="CatFacts API">
+    <meta property="og:description" content="Play and learn with CatFacts API - catch the mouse to unlock interesting cat facts!">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://www.catfactsapi.com">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/startseite.css">
-    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="images/icon-32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="images/icon-16.png" type="image/png">
 </head>
 
 <body>
 
-    <div id="popup" class="popup">
+    <div id="popup" class="popup" role="dialog" aria-labelledby="popupTitle" aria-describedby="popupDescription">
         <div class="popup-content">
-            <img src="images/catandmouse.png" class="popup-image" alt="catandmouse">
-            <h1>HOW IT WORKS:</h1>
-            <p id="popup_text">The cat wants to play! Move the cursor and try to catch the mouse. 
+            <img src="images/catandmouse.webp" class="popup-image" alt="catandmouse" loading="lazy">
+            <h1 id="popupTitle">HOW IT WORKS:</h1>
+            <p id="popupDescription">The cat wants to play! Move the cursor and try to catch the mouse. 
                 If you're on your phone, jump to catch the mouse with a tap.
                 Each successful catch unlocks a cat fact!</p>
             <button id="go_for_it">GO FUR IT</button>
@@ -24,71 +30,61 @@
     </div>
 
     <header class="header">
-        <nav class="navigation">
-            <div id="hoverCount"> <span id="hoverNumber">0</span> x <img src="images/catpaw.png" alt="Bild Pfote"
-                    id="catpaw"> </div>
+        <nav class="navigation" role="navigation" aria-label="Main Navigation">
+            <div id="hoverCount">
+                <span id="hoverNumber">0</span> x <img src="images/catpaw.png" alt="Bild Pfote" id="catpaw">
+            </div>
             <div class="burger">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
-
             </div>
         </nav>
         <div class="menu">
             <div class="menu_liste">
                 <ul>
-                    <li>
-                        <h1>MEOW-NU</h1>
-                    </li>
+                    <li><h1>MEOW-NU</h1></li>
                 </ul>
                 <div class="trennlinie"></div>
                 <ul>
-                        <li class="menu_item">
-                            <a href="index.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
-                            <a href="index.html?popup=false" class="navigation-link">GAME</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="alle_catfacts.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
-                            <a href="alle_catfacts.html" class="navigation-link">MORE CATFAAACTS</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="team.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
-                            <a href="team.html" class="navigation-link">MEOWMBERS</a>
-                        </li>
-                    </ul>
+                    <li class="menu_item">
+                        <a href="index.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
+                        <a href="index.html?popup=false" class="navigation-link">GAME</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="alle_catfacts.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
+                        <a href="alle_catfacts.html" class="navigation-link">MORE CATFAAACTS</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="team.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
+                        <a href="team.html" class="navigation-link">MEOWMBERS</a>
+                    </li>
+                </ul>
             </div>
         </div>
-
-
     </header>
 
-
     <main class="main">
-        <div class=container id="catFactsApp">
-            <img src="images/cat.gif" alt="Bild Katze" id="cat">
-            <a href="catfact.html"><img src="images/mouse.gif" alt="Bild Maus" id="mouse"></a>
-        </div>
+        <section class="container" id="catFactsApp">
+            <img src="images/cat.gif" alt="Bild Katze" id="cat" loading="lazy">
+            <a href="catfact.html"><img src="images/mouse.gif" alt="Bild Maus" id="mouse" loading="lazy"></a>
+        </section>
 
-        <div class="popup_fact" id="popup_fact">
+        <div class="popup_fact" id="popup_fact" role="dialog" aria-labelledby="popupFactTitle" aria-describedby="popupFactDescription">
             <div class="popup-content_fact">
-                <h1>PURRFECT!</h1>
-                <p>Amazing! Here's your catfact:</p>
-                <div id="catFact">
-                </div>
+                <h1 id="popupFactTitle">PURRFECT!</h1>
+                <p id="popupFactDescription">Amazing! Here's your catfact:</p>
+                <div id="catFact"></div>
                 <button id="more_mice">MORE MICE</button>
             </div>
         </div>
-
     </main>
 
-
-    <footer class="footer">
-
-    </footer>
+    <footer class="footer"></footer>
     <audio id="hoverSound" src="sound/cat-meow.mp3"></audio>
 
-    <script src="js/script.js"></script>
-    <script src="js/startseite.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/startseite.js" defer></script>
 </body>
 
 </html>

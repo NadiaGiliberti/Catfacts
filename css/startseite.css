@@ -1,6 +1,6 @@
-/* Einstellng für Body, damit das Bild Maus nicht aus dem Screen kann */
+/* Einstellungen für Body, damit das Bild Maus nicht aus dem Screen kann */
 body {
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top left;
     overflow: hidden;
@@ -8,14 +8,14 @@ body {
     height: 100vh;
 }
 
-/* Counter wieviele Mäuse gefangen wurden  */
+/* Counter wieviele Mäuse gefangen wurden */
 .score {
     display: flex;
 }
 
-/* Counter */ 
+/* Counter */
 #hoverCount {
-    font-size: 6vw;
+    font-size: 6rem; /* Verwende rem für bessere Skalierbarkeit */
     flex-direction: row;
 }
 
@@ -23,8 +23,6 @@ body {
 #catpaw {
     width: 3.5%;
 }
-
-
 
 /* Katzenbild am Cursor */
 #cat {
@@ -37,18 +35,14 @@ body {
 }
 
 /* flüchtende Maus */
-
 #mouse {
     width: 12%;
     padding: 30px;
     position: absolute;
     transition: left 1s, top 1s;
-    /* Füge eine Übergangseigenschaft hinzu */
 }
 
-/* Popupfenster wenn die Seite geladen wird: */
-
-/* Popup Fenster */
+/* Popupfenster wenn die Seite geladen wird */
 .popup {
     position: fixed;
     top: 0;
@@ -58,17 +52,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f6f5f1c4;
-    /* Hintergrundfarbe mit Transparenz für Overlay */
+    background-color: rgba(246, 245, 241, 0.77); /* Verwende rgba für bessere Transparenzsteuerung */
     color: #F6F5F1;
     z-index: 999;
-    /* Z-Index, um das Popup über anderen Inhalten zu platzieren */
 }
 
 /* Popup Inhalt */
 .popup-content {
     background-color: #AC99BA;
-    padding: 50px;
+    padding: 3rem; /* Verwende rem für bessere Skalierbarkeit */
     border-radius: 5px;
     text-align: center;
     width: 70%;
@@ -81,21 +73,16 @@ body {
 }
 
 /* Popup bild Katze und Maus */
-
 .popup-image {
     position: absolute;
     top: 20%;
-    /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
     right: 20%;
-    /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
     width: 10%;
-    /* Breite des Bildes */
     z-index: 9999;
-    /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 10px auto 0%;
+    margin: 10px auto 0;
 }
 
 /* Button beim Popup */
@@ -103,25 +90,20 @@ body {
     font-family: tell_me_a_joke;
     background-color: #000000;
     color: #F6F5F1;
-    font-size: 3vw;
+    font-size: 1.5rem;
     border-radius: 10px;
     margin-top: 2%;
     padding: 10px;
     border: none;
     cursor: pointer;
-    /* Changes cursor to pointer on hover */
     transition: background-color 0.3s ease;
-    /* Smooth transition effect */
 }
 
 #go_for_it:hover {
     background-color: #808080;
-    /* Change background to gray on hover */
 }
 
-/* Popupfenster CatFact: */
-
-/* Popup für Catfact */
+/* Popupfenster CatFact */
 .popup_fact {
     position: fixed;
     top: 0;
@@ -131,17 +113,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f6f5f1c4;
-    /* Hintergrundfarbe mit Transparenz für Overlay */
+    background-color: rgba(246, 245, 241, 0.77); /* Verwende rgba für bessere Transparenzsteuerung */
     color: #F6F5F1;
     z-index: 999;
-    /* Z-Index, um das Popup über anderen Inhalten zu platzieren */
 }
 
 /* Popup Inhalt Catfact */
 .popup-content_fact {
     background-color: #AC99BA;
-    padding: 50px;
+    padding: 3rem; /* Verwende rem für bessere Skalierbarkeit */
     border-radius: 5px;
     text-align: center;
     width: 70%;
@@ -152,9 +132,7 @@ body {
 .catFact {
     display: flex;
     width: 100%;
-    /* increased from 50vw */
     height: 50%;
-    /* increased from 32vh */
     gap: 10px;
     border-radius: 10px;
     padding: 2%;
@@ -176,7 +154,7 @@ body {
     flex-direction: column;
     overflow: auto;
     gap: 10px;
-    font-size: 2vw;
+    font-size: 1.5rem; /* Verwende rem für bessere Skalierbarkeit */
     height: 300px;
     color: #F6F5F1;
     text-align: left;
@@ -187,24 +165,20 @@ body {
     font-family: tell_me_a_joke;
     background-color: #000000;
     color: #F6F5F1;
-    font-size: 3vw;
+    font-size: 1.5rem;
     border-radius: 10px;
     margin-top: 2%;
     padding: 10px;
     border: none;
     cursor: pointer;
-    /* Changes cursor to pointer on hover */
     transition: background-color 0.3s ease;
-    /* Smooth transition effect */
 }
 
 #more_mice:hover {
     background-color: #808080;
-    /* Change background to gray on hover */
 }
 
 /* SCROLLBAR */
-
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -222,144 +196,94 @@ body {
     border-radius: 10px;
 }
 
-/*** small Laptop  ***/
+/* Medienabfragen */
+
+/* Small Laptop */
 @media screen and (max-width: 1260px) {
-
-    /* Popupfenster wenn die Seite geladen wird: */
-
     .popup-image {
         top: 30%;
-        /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 17%;
-        /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
-
     }
-
-    /* Popup Catfact */
     .popup-content_fact {
         height: 500px;
     }
-
-    /* Bild formatierung */
     .catFact_image {
         height: 200px;
     }
-
-    /* Text formatierung */
     .catFact_text {
         height: 200px;
-        font-size: 3vw;
+        font-size: 2rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
 }
 
-/*** Tablet ***/
+/* Tablet */
 @media screen and (max-width: 820px) {
-
     .popup-image {
-        position: absolute;
         top: 28%;
-        /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 19%;
-        /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%;
-        /* Breite des Bildes */
         z-index: 9999;
-        /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
-
     .popup-content {
-        padding: 35px;
+        padding: 2.5rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
-    /* Popup Catfact */
     .popup-content_fact {
         height: 450px;
-        padding: 35px;
+        padding: 2.5rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
-    /* Bild formatierung */
     .catFact_image {
         height: 200px;
     }
-
-    /* Text formatierung */
     .catFact_text {
-        font-size: 4vw;
+        font-size: 2.5rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
 }
 
-/*** Handy  ***/
+/* Handy */
 @media screen and (max-width: 576px) {
     .popup-content {
-        padding: 20px;
+        padding: 1.25rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
     .popup-image {
-        position: absolute;
         top: 31%;
-        /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 20%;
-        /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%;
-        /* Breite des Bildes */
         z-index: 9999;
-        /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
-
     #mouse {
         width: 22%;
         padding: 30px;
         position: absolute;
         transition: left 1s, top 1s;
-        /* Füge eine Übergangseigenschaft hinzu */
     }
-
     .popup-content_fact {
-        padding: 20px;
+        padding: 1.25rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
     .catFact {
         flex-direction: column;
     }
-
-    /* Bild formatierung */
     .catFact_image {
         align-self: center;
         height: 120px;
         width: 90%;
     }
-
-    /* Text formatierung */
     .catFact_text {
         height: 140px;
         width: 100%;
-        font-size: 6vw;
-
+        font-size: 3rem; /* Verwende rem für bessere Skalierbarkeit */
     }
-
-    /* Button formatierung */
     #more_mice {
         padding: 10px;
         margin-top: 5%;
     }
-
 }
 
-
-/*** kleines Handy  ***/
+/* Kleines Handy */
 @media screen and (max-width: 200px) {
     .popup-image {
-        position: absolute;
         top: 40%;
-        /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 10%;
-        /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
         width: 10%;
-        /* Breite des Bildes */
         z-index: 9999;
-        /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
-
 }
