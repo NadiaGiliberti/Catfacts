@@ -1,13 +1,43 @@
-/* Header Schriftart */
+/* Titel MEOWMBERS */
 .team {
     font-size: 6vw;
 }
 
+/* gesamter Container für Inhalte  */
 .container_main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Violette Box pro Gruppenmitglied mit Inhalt */
+.team_pictures {
+    display: flex;
+    width: 90%;
+    height: 32vh;
+    background-color: #AC99BA;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 2%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CatFact Text formatierung */
+#catFactsApp p {
+    gap: 10px;
+    justify-content: center;    
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: column;
+    overflow: auto;
+    font-size: 2vw;
+    max-width: 75%;
+    color: #F6F5F1;
 }
 
 /* Bilder Gruppenmitglieder */
@@ -19,6 +49,16 @@
     overflow: hidden;
 }
 
+
+
+
+
+
+
+
+/* BILDER GRUPPENMITGLIEDER FÜR HOVER-EFFEKT */
+
+/* Format Bilder */
 .team_image {
     width: 100%;
     height: auto;
@@ -27,6 +67,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+ /* Nur Formatierung für Bilder real */
 .team_image.hover_image {
     position: absolute;
     top: 0;
@@ -36,51 +77,15 @@
     opacity: 0;
 }
 
+/* Tausch der Sichtbarkeit bei Hover der beiden Bilder */
 .team_image_wrapper:hover .hover_image {
     opacity: 1;
 }
-
 .team_image_wrapper:hover .original_image {
     opacity: 0;
 }
 
-.team_pictures {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    width: 60vw;
-    height: 32vh;
-    background-color: #AC99BA;
-    gap: 10px;
-    border-radius: 10px;
-    padding: 2%;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-}
 
-
-#catFactsApp {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-#catFactsApp p {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    /* Centers the articles horizontally */
-    align-items: center;
-    /* Centers the articles vertically */
-    flex-wrap: wrap;
-    padding: 10px;
-    flex-direction: column;
-    overflow: auto;
-    font-size: 2vw;
-    max-width: 75%;
-    color: #F6F5F1;
-}
 
 /* SEARCHBAR */
 
@@ -100,6 +105,8 @@
     background: #F6F5F1;
     border-radius: 10px;
 }
+
+
 
 /***Small Laptop  ***/
 @media screen and (max-width: 1024px) {
