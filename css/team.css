@@ -9,31 +9,25 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap;
+    margin-bottom: 2%;
 }
 
 /* Violette Box pro Gruppenmitglied mit Inhalt */
-.team_pictures {
+.team_member {
     display: flex;
+    flex-direction: row;
     width: 90%;
-    height: 32vh;
     background-color: #AC99BA;
     gap: 10px;
     border-radius: 10px;
     padding: 2%;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
 }
 
 /* CatFact Text formatierung */
 #catFactsApp p {
-    gap: 10px;
-    justify-content: center;    
-    align-items: center;
+    display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    flex-direction: column;
     overflow: auto;
     font-size: 2vw;
     max-width: 75%;
@@ -42,6 +36,7 @@
 
 /* Bilder Gruppenmitglieder */
 .team_image_wrapper {
+    display: flex;
     position: relative;
     width: 20%;
     height: auto;
@@ -50,30 +45,21 @@
 }
 
 
-
-
-
-
-
-
 /* BILDER GRUPPENMITGLIEDER FÜR HOVER-EFFEKT */
 
 /* Format Bilder */
 .team_image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
     transition: opacity 0.3s ease-in-out;
 }
 
- /* Nur Formatierung für Bilder real */
+/* Nur Formatierung für Fotos von uns  */
 .team_image.hover_image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     opacity: 0;
 }
 
@@ -81,6 +67,7 @@
 .team_image_wrapper:hover .hover_image {
     opacity: 1;
 }
+
 .team_image_wrapper:hover .original_image {
     opacity: 0;
 }
@@ -114,6 +101,11 @@
     /* Text formatierung */
     #catFactsApp p {
         font-size: 3vw;
+        max-width: 65%;
+    }
+
+    .team_image_wrapper {
+        width: 30%;
     }
 
 }
@@ -123,25 +115,23 @@
 @media screen and (max-width: 768px) {
 
     /* Container pro Inhalt*/
-    .team_pictures {
-        flex-direction: column;
-        width: 80vw;
-        gap: 10px;
+    .team_members {
         border-radius: 5px;
+        flex-direction: column;
     }
 
     /* Bild formatierung */
-    .team_image {
-        width: 30%;
+    .team_image_wrapper {
+        width: 100%;
+        height: auto;
         border-radius: 3px;
-        margin: 0 auto;
     }
 
     /* Text formatierung */
     #catFactsApp p {
         font-size: 4vw;
         padding: 8px;
-        gap: 8px;
+        max-width: 55%;
     }
 
 }
@@ -150,26 +140,25 @@
 @media screen and (max-width: 576px) {
 
     /* Container pro Inhalt*/
-    .team_pictures {
+    .team_member {
         flex-direction: column;
-        width: 80vw;
-        gap: 10px;
         border-radius: 5px;
+        align-items: center;
     }
 
     /* Bild formatierung */
-    .team_image {
-        width: 30%;
+    .team_image_wrapper {
+        width: 70%;
         border-radius: 3px;
-        margin: 0 auto;
+    }
+
+    .team_image {
+        border-radius: 3px;
     }
 
     /* Text formatierung */
     #catFactsApp p {
         font-size: 6vw;
-        padding: 8px;
-        gap: 8px;
+        max-width: 95%;
     }
-
-
 }
