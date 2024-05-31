@@ -1,45 +1,62 @@
 // POP UP BEIM LADEN DER SEITE
 
+// Funktion fürs POP UP öffnen
 function openPopup(popup) {
     var popup = document.getElementById("popup");
 }
 
+// Funktion fürs POP UP schliessen
 function closePopup(popup) {
     var popup = document.getElementById("popup");
     popup.style.display = "none";
 }
 
+// Event fürs POP UP schliessen, bei klick auf Button
 document.getElementById("go_for_it").addEventListener("click", function() {
     closePopup("popup");
 });
 
-//POP UP BEIM HOVER ÜBER DAS BILD MAUS
+// POP UP BEIM HOVER ÜBER DAS BILD MAUS
+
+// Funktion fürs POP UP öffnen
 function openPopup_fact(popup_fact) {
     var popup_fact = document.getElementById("popup_fact");
     popup_fact.style.display = "flex";
 }
 
+// Funktion fürs POP UP schliessen
 function closePopup_fact(popup_fact) {
     var popup_fact = document.getElementById("popup_fact");
     popup_fact.style.display = "none";
 }
 
-// EVENT FÜR HOVER ÜBER DAS BILD MAUS
+// Das Popup wird nur beim Hover über das Bild "mouse" angezeigt
 document.getElementById("mouse").addEventListener("mouseover", function() {
-    openPopup_fact("popup_fact"); // Das Popup wird nur beim Hover über das Bild "mouse" angezeigt
+    openPopup_fact("popup_fact"); 
+    playHoverSound(); // Sound abspielen
 });
 
+// Event fürs POP UP schliessen, bei klick auf Button
 document.getElementById("more_mice").addEventListener("click", function() {
     closePopup_fact("popup_fact");
     init('https://cat-fact.herokuapp.com/facts/random?amount=300', 'https://api.thecatapi.com/v1/images/search?limit=10');
 });
 
 
+// Funktion zur Wiedergabe des Hover-Sounds
+function playHoverSound() {
+    var hoverSound = document.getElementById("hoverSound");
+    hoverSound.playbackRate = 2; // Erhöhen Sie die Wiedergabegeschwindigkeit (1.5 ist 50% schneller)
+    hoverSound.play();
+}
+
 // KATZE AN CURSOR
+
 // Fenstergröße erheben
 let mouseXprevious = [0];
 let mouseYprevious = [0];
-//Katze an Cursor fixieren
+
+// Katze an Cursor fixieren
 let cat = document.querySelector('#cat');
 document.addEventListener('mousemove', function(e) {
     let posX = e.clientX;
@@ -75,10 +92,11 @@ document.addEventListener('mousemove', function(e) {
     mouseYprevious = mouseYprevious.slice(0, 8);
 });
 
-//HOVERZÄHLER
+// HOVERZÄHLER
 
 // Laden der aktuellen Hoveranzahl
 var hoverCount = parseInt(sessionStorage.getItem('hoverCount')) || 0;
+
 // Funktion zur Aktualisierung der Hoveranzahl-Anzeige
 function updateHoverCount() {
     // Laden der aktuellen Hoveranzahl
@@ -95,7 +113,7 @@ function updateHoverCount() {
 
     let url_param = window.location.search;
     if (hoverCount > 0 && url_param !== '?popup=false') {
-        // Wenn der Hoverzähler 0 ist, zeige das Popup an
+        // Wenn der Hoverzähler größer als 0 ist, zeige das Popup an
         document.getElementById("popup_fact").style.display = "flex";
     } else {
         // Andernfalls, verstecke das Popup
@@ -104,10 +122,11 @@ function updateHoverCount() {
         if (url_param === '?popup=false') {
             let new_url = window.location.origin + window.location.pathname;
             window.history.replaceState(null, '', new_url);
+        }
     }
 }
-}
 
+// Funktion zur Verarbeitung des Maus-Hover-Ereignisses
 function handleMouseHover(event) {
     // Überprüfen, ob das gehoverte Element die ID "mouse" hat
     if (event.target.id === "mouse") {
@@ -119,7 +138,6 @@ function handleMouseHover(event) {
 
         // Aktualisiere die Anzeige der Hoveranzahl auf dem Bildschirm
         updateHoverCount();
-        
     }
 }
 
@@ -133,8 +151,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const popupFact = document.querySelector('#catFact');
 
+// Initialisieren der Daten und Bilder
 init('https://cat-fact.herokuapp.com/facts/random?amount=300', 'https://api.thecatapi.com/v1/images/search?limit=10');
 
+// Initialisieren der Daten
 async function init(url, url_2) {
     let catFacts = await fetchData(url);
     let catImages = await fetchImage(url_2);
@@ -153,6 +173,7 @@ async function init(url, url_2) {
     }
 }
 
+// Suche nach Katzenfakten und Bildern
 async function search(searchValue) {
     let url = `https://cat-fact.herokuapp.com/facts/random?amount=300&text=${searchValue}`;
     let url_2 = `https://api.thecatapi.com/v1/images/search?limit=10&text=${searchValue}`;
@@ -164,6 +185,7 @@ async function search(searchValue) {
     }
 }
 
+// Erstellen eines Elements mit Katzenfakten und Bildern
 function createItem(catFact, catImage) {
     popupFact.innerHTML = '';
     let item = document.createElement('div');
@@ -176,6 +198,7 @@ function createItem(catFact, catImage) {
     popupFact.appendChild(item);
 }
 
+// Abrufen der Daten
 async function fetchData(url) {
     try {
         let response = await fetch(url);
@@ -188,6 +211,7 @@ async function fetchData(url) {
     }
 }
 
+// Abrufen der Bilder
 async function fetchImage(url_2) {
     try {
         let response = await fetch(url_2);
@@ -201,6 +225,7 @@ async function fetchImage(url_2) {
 
 // MAUS AN ZUFÄLLIGER POSITION
 
+// Initialisierung beim Laden des Fensters
 window.onload = function() {
     var bild = document.getElementById("mouse");
     var aktuelleXPos = 0;

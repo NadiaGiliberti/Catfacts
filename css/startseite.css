@@ -1,3 +1,4 @@
+/* Einstellng für Body, damit das Bild Maus nicht aus dem Screen kann */
 body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -7,21 +8,25 @@ body {
     height: 100vh;
 }
 
+/* Counter wieviele Mäuse gefangen wurden  */
 .score {
     display: flex;
 }
 
-#catpaw {
-    width: 3.5%;
-}
-
+/* Counter */ 
 #hoverCount {
     font-size: 6vw;
     flex-direction: row;
 }
 
-/* Katzenbild am Cursor */
+/* Katzenpfote beim Counter der Mäuse */
+#catpaw {
+    width: 3.5%;
+}
 
+
+
+/* Katzenbild am Cursor */
 #cat {
     position: absolute;
     transform: translate(-50%, -50%);
