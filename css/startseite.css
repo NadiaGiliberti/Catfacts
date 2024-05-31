@@ -13,7 +13,7 @@ body {
     display: flex;
 }
 
-/* Counter */ 
+/* Counter */
 #hoverCount {
     font-size: 6vw;
     flex-direction: row;
@@ -37,7 +37,6 @@ body {
 }
 
 /* flüchtende Maus */
-
 #mouse {
     width: 12%;
     padding: 30px;
@@ -46,9 +45,9 @@ body {
     /* Füge eine Übergangseigenschaft hinzu */
 }
 
-/* Popupfenster wenn die Seite geladen wird: */
+/* POP UP FENSTER - ERKLÄRUNG SPIEL (BEI FENSER NEU ÖFFNEN): */
 
-/* Popup Fenster */
+/* Popup über ganzen Screen */
 .popup {
     position: fixed;
     top: 0;
@@ -80,8 +79,7 @@ body {
     margin-right: 25%;
 }
 
-/* Popup bild Katze und Maus */
-
+/* Bild Katze und Maus im POP UP */
 .popup-image {
     position: absolute;
     top: 20%;
@@ -119,7 +117,7 @@ body {
     /* Change background to gray on hover */
 }
 
-/* Popupfenster CatFact: */
+/* POP UP FENSTER WENN EIN CATFACT FREIGESCHALTET WIRD: */
 
 /* Popup für Catfact */
 .popup_fact {
@@ -193,19 +191,19 @@ body {
     padding: 10px;
     border: none;
     cursor: pointer;
-    /* Changes cursor to pointer on hover */
+    /* Wechselt den Cursor zu einer Hand bei Hover */
     transition: background-color 0.3s ease;
-    /* Smooth transition effect */
+    /* Transformationseffekt */
 }
 
 #more_mice:hover {
     background-color: #808080;
-    /* Change background to gray on hover */
+    /* Wechselt die Button-Farbe bei Hover */
 }
 
-/* SCROLLBAR */
+/* AB HIER SCROLLBAR */
 
-/* width */
+/* Breite */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -222,6 +220,8 @@ body {
     border-radius: 10px;
 }
 
+/* AB HIER MEDIAQUERIES */
+
 /*** small Laptop  ***/
 @media screen and (max-width: 1260px) {
 
@@ -232,7 +232,6 @@ body {
         /* Anpassen, je nachdem wie weit von oben das Bild sein soll */
         right: 17%;
         /* Anpassen, je nachdem wie weit von rechts das Bild sein soll */
-
     }
 
     /* Popup Catfact */
@@ -256,6 +255,14 @@ body {
 /*** Tablet ***/
 @media screen and (max-width: 820px) {
 
+    /* POP UP FENSTER - ERKLÄRUNG SPIEL (BEI FENSER NEU ÖFFNEN): */
+
+    /* Popup Inhalt */
+    .popup-content {
+        padding: 35px;
+    }
+
+    /* Bild Katze und Maus im POP UP */
     .popup-image {
         position: absolute;
         top: 28%;
@@ -268,9 +275,7 @@ body {
         /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
 
-    .popup-content {
-        padding: 35px;
-    }
+    /* POP UP FENSTER WENN EIN CATFACT FREIGESCHALTET WIRD: */
 
     /* Popup Catfact */
     .popup-content_fact {
@@ -292,10 +297,24 @@ body {
 
 /*** Handy  ***/
 @media screen and (max-width: 576px) {
+
+    /* flüchtende Maus */
+    #mouse {
+        width: 22%;
+        padding: 30px;
+        position: absolute;
+        transition: left 1s, top 1s;
+        /* Füge eine Übergangseigenschaft hinzu */
+    }
+
+    /* POP UP FENSTER - ERKLÄRUNG SPIEL (BEI FENSER NEU ÖFFNEN): */
+
+    /* Popup Inhalt */
     .popup-content {
         padding: 20px;
     }
 
+    /* Bild Katze und Maus im POP UP */
     .popup-image {
         position: absolute;
         top: 31%;
@@ -308,18 +327,14 @@ body {
         /* Stellen Sie sicher, dass das Bild über dem Pop-Up liegt */
     }
 
-    #mouse {
-        width: 22%;
-        padding: 30px;
-        position: absolute;
-        transition: left 1s, top 1s;
-        /* Füge eine Übergangseigenschaft hinzu */
-    }
+    /* POP UP FENSTER WENN EIN CATFACT FREIGESCHALTET WIRD: */
 
+    /* Popup Inhalt Catfact */
     .popup-content_fact {
         padding: 20px;
     }
 
+    /* Div für API Inhalte */
     .catFact {
         flex-direction: column;
     }
@@ -339,7 +354,7 @@ body {
 
     }
 
-    /* Button formatierung */
+    /* Button formatierung beim Pop up CatFact */
     #more_mice {
         padding: 10px;
         margin-top: 5%;
@@ -350,6 +365,10 @@ body {
 
 /*** kleines Handy  ***/
 @media screen and (max-width: 200px) {
+
+    /* POP UP FENSTER - ERKLÄRUNG SPIEL (BEI FENSER NEU ÖFFNEN): */
+
+    /* Bild Katze und Maus im POP UP */
     .popup-image {
         position: absolute;
         top: 40%;

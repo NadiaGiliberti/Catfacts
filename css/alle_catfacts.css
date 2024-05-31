@@ -1,3 +1,4 @@
+/* Titel oben links */
 .moreFacts {
     font-size: 6vw;
 }
@@ -79,6 +80,8 @@
     background: #F6F5F1;
     border-radius: 10px;
 }
+
+/* AB HIER MEDIAQUERIES */
 
 /***Small Laptop  ***/
 @media screen and (max-width: 1024px) {

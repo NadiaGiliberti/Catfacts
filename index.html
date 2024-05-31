@@ -11,12 +11,12 @@
 </head>
 
 <body>
-
+    <!-- POP UP - SPIELERKLÄRUNG -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <img src="images/catandmouse.png" class="popup-image" alt="catandmouse">
             <h1>HOW IT WORKS:</h1>
-            <p id="popup_text">The cat wants to play! Move the cursor and try to catch the mouse. 
+            <p id="popup_text">The cat wants to play! Move the cursor and try to catch the mouse.
                 If you're on your phone, jump to catch the mouse with a tap.
                 Each successful catch unlocks a cat fact!</p>
             <button id="go_for_it">GO FUR IT</button>
@@ -41,21 +41,22 @@
                         <h1>MEOW-NU</h1>
                     </li>
                 </ul>
-                <div class="trennlinie"></div>
+                <div class="trennlinie"></div> <!-- Burgermenu und ul = Inhalt vom Burgermenu -->
                 <ul>
-                        <li class="menu_item">
-                            <a href="index.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
-                            <a href="index.html?popup=false" class="navigation-link">GAME</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="alle_catfacts.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
-                            <a href="alle_catfacts.html" class="navigation-link">MORE CATFAAACTS</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="team.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
-                            <a href="team.html" class="navigation-link">MEOWMBERS</a>
-                        </li>
-                    </ul>
+                    <li class="menu_item">
+                        <a href="index.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
+                        <a href="index.html?popup=false" class="navigation-link">GAME</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="alle_catfacts.html"><img src="images/catpaw.png" alt="catpaw_point"
+                                class="catpaw_menu"></a>
+                        <a href="alle_catfacts.html" class="navigation-link">MORE CATFAAACTS</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="team.html"><img src="images/catpaw.png" alt="catpaw_point" class="catpaw_menu"></a>
+                        <a href="team.html" class="navigation-link">MEOWMBERS</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -68,7 +69,7 @@
             <img src="images/cat.gif" alt="Bild Katze" id="cat">
             <a href="catfact.html"><img src="images/mouse.gif" alt="Bild Maus" id="mouse"></a>
         </div>
-
+        <!-- POP UP, wenn ein Fact gesammelt wurde -->
         <div class="popup_fact" id="popup_fact">
             <div class="popup-content_fact">
                 <h1>PURRFECT!</h1>
