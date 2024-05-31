@@ -155,8 +155,8 @@ init('https://cat-fact.herokuapp.com/facts/random?amount=300', 'https://api.thec
 
 // Initialisieren der Daten
 async function init(url, url_2) {
-    const catFacts = await fetchData(url);
-    const catImages = await fetchImage(url_2);
+    let catFacts = await fetchData(url);
+    let catImages = await fetchImage(url_2);
     console.log(catFacts[0].text);
     console.log(catImages); 
     if (catFacts.length > 0 && catImages && catImages.length > 0) {
@@ -174,11 +174,11 @@ async function init(url, url_2) {
 
 // Suche nach Katzenfakten und Bildern
 async function search(searchValue) {
-    const url = `https://cat-fact.herokuapp.com/facts/random?amount=300&text=${searchValue}`;
-    const url_2 = `https://api.thecatapi.com/v1/images/search?limit=10&text=${searchValue}`;
+    let url = `https://cat-fact.herokuapp.com/facts/random?amount=300&text=${searchValue}`;
+    let url_2 = `https://api.thecatapi.com/v1/images/search?limit=10&text=${searchValue}`;
     popupFact.innerHTML = '';
-    const catFacts = await fetchData(url);
-    const catImages = await fetchImage(url_2);
+    let catFacts = await fetchData(url);
+    let catImages = await fetchImage(url_2);
     for (let i = 0; i < 1; i++) {
         createItem(catFacts[i], catImages[i]);
     }
@@ -187,9 +187,9 @@ async function search(searchValue) {
 // Erstellen eines Elements mit Katzenfakten und Bildern
 function createItem(catFact, catImage) {
     popupFact.innerHTML = '';
-    const item = document.createElement('div');
+    let item = document.createElement('div');
     item.classList.add('catFact');
-    const imageUrl = catImage && catImage.url ? catImage.url : 'URL nicht verfügbar';
+    let imageUrl = catImage && catImage.url ? catImage.url : 'URL nicht verfügbar';
     item.innerHTML = `
     <img src="${imageUrl}" alt="Cat Image" class="catFact_image">
     <p class="catFact_text">${catFact.text}</p>`;
@@ -199,9 +199,9 @@ function createItem(catFact, catImage) {
 // Abrufen der Daten
 async function fetchData(url) {
     try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const verifiedFacts = data.filter(fact => fact.status.verified === true);
+        let response = await fetch(url);
+        let data = await response.json();
+        let verifiedFacts = data.filter(fact => fact.status.verified === true);
         return verifiedFacts;
     } catch (error) {
         console.error(error);
@@ -211,8 +211,8 @@ async function fetchData(url) {
 // Abrufen der Bilder
 async function fetchImage(url_2) {
     try {
-        const response = await fetch(url_2);
-        const data = await response.json();
+        let response = await fetch(url_2);
+        let data = await response.json();
         return data;
     } catch (error) {
         console.error(error);
